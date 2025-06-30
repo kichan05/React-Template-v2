@@ -1,9 +1,12 @@
-import { useState } from 'react'
+import {GlobalStyle} from "./GlobalStyle";
 
 function App() {
-  return (
-      <h1>Hello Worod</h1>
-  )
+    return (
+        <>
+            <GlobalStyle/>
+            <h1>Hello Worod</h1>
+        </>
+    )
 }
 
 export default App

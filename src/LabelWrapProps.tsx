@@ -5,11 +5,11 @@ export type LabelWrapProps = {
     label: string;
     children: ReactNode;
 }
-const LabelWrapStyle = styled.div`
+const LabelWrapStyle = styled.label`
   display: flex;
   flex-direction: column;
 `
-const Label = styled.label`
+const Label = styled.div`
   font-size: 14px;
   font-weight: bold;
 `

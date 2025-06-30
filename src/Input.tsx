@@ -23,8 +23,6 @@ export const Input: FC<InputProps> = ({value, onChange, ...rest}) => {
             value={value}
             onChange={(e) => onChange(e.target.value)}
             {...rest}
-        >
-
-        </InputStyle>
+        />
     );
 };

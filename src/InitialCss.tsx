@@ -1,3 +1,5 @@
+import {css} from "styled-components";
+
 export const InitialCss = css`
   /* reset.css */
   html, body, div, span, applet, object, iframe,

@@ -1,10 +1,10 @@
 import {FiCheck} from "react-icons/fi";
 import styled, {css} from "styled-components";
 import {FaCircleCheck} from "react-icons/fa6";
-import React from "react";
+import {FC, ReactNode} from "react";
 
 export type CheckItemProps = {
-    children? : React.ReactNode;
+    children? : ReactNode;
     isChecked : boolean;
     onCheck: (isChecked : boolean) => void;
 }
@@ -13,7 +13,7 @@ export type CheckItemStyleProps = {
     isChecked : boolean;
 }
 
-export const CheckItem : React.FC<CheckItemProps> = ({children, isChecked, onCheck}) => {
+export const CheckItem : FC<CheckItemProps> = ({children, isChecked, onCheck}) => {
   return (
     <CheckItemStyle isChecked={isChecked} onClick={() => onCheck(!isChecked)}>
       <FaCircleCheck className={"check-icon"}/>

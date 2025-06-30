@@ -1,10 +1,10 @@
 import {FC, useState} from "react";
 import styled from "styled-components";
-import {PageLayout} from "./PageLayout";
-import {Button} from "./Button";
-import {Input} from "./Input";
-import {LabelWrap} from "./LabelWrapProps";
-import {Space} from "./Space";
+import {PageLayout} from "../style/PageLayout";
+import {Button} from "../component/atom/Button";
+import {Input} from "../component/atom/Input";
+import {LabelWrap} from "../component/molecules/LabelWrap";
+import {Space} from "../style/Space";
 
 export type MainPageProps = {}
 

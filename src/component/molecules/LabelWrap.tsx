@@ -1,7 +1,7 @@
 import {FC, ReactNode} from "react";
 import styled from "styled-components";
 
-export type LabelWrapProps = {
+export type LabelWrap = {
     label: string;
     children: ReactNode;
 }
@@ -20,7 +20,7 @@ const InputWrap = styled.div`
     width : 100%;
   }
 `
-export const LabelWrap: FC<LabelWrapProps> = ({label, children}) => {
+export const LabelWrap: FC<LabelWrap> = ({label, children}) => {
     return (
         <LabelWrapStyle>
             <Label>{label}</Label>

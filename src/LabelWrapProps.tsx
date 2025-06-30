@@ -14,7 +14,7 @@ const Label = styled.div`
   font-weight: bold;
 `
 const InputWrap = styled.div`
-  padding: 4px;
+  padding: 8px;
   
   & > * {
     width : 100%;

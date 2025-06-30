@@ -9,9 +9,8 @@ export type InputProps = {
 const InputStyle = styled.input`
   font-size: 13px;
 
-  box-shadow: 0 0 0 2px ${p => p.theme.color.Gray3};
+  box-shadow: 0 0 0 1px ${p => p.theme.color.Gray3};
   border: none;
-   //border: 2px solid ${p => p.theme.color.Gray3};
   border-radius: 5px;
   outline: none;
   padding: 10px;

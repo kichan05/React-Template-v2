@@ -4,6 +4,7 @@ import {PageLayout} from "./PageLayout";
 import {Button} from "./Button";
 import {Input} from "./Input";
 import {LabelWrap} from "./LabelWrapProps";
+import {Space} from "./Space";
 
 export type MainPageProps = {}
 
@@ -15,15 +16,16 @@ export const MainPage: FC<MainPageProps> = () => {
     return (
         <PageLayout>
             <MainPageStyle>
-                저는 박희찬입니다.
                 <Button
                     isDisabled
                     onClick={() => alert("Hello")}
                 >클릭 하면 답이 나올지어다</Button>
+                <Space h={20}/>
                 <Input
                     value={name}
                     onChange={setName}
                 />
+                <Space v={20}/>
                 <LabelWrap label={"이름"}>
                     <Input
                         value={name}

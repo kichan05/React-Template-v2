@@ -1,13 +1,13 @@
 import {FC} from "react";
 import styled from "styled-components";
 import {PageLayout} from "./PageLayout";
+import {Button} from "./Button";
 
 export type MainPageProps = {
 
 }
 
 const MainPageStyle = styled.div`
-  background-color: #f00;
 `
 
 export const MainPage: FC<MainPageProps> = () => {
@@ -15,6 +15,8 @@ export const MainPage: FC<MainPageProps> = () => {
         <PageLayout>
             <MainPageStyle>
                 저는 박희찬입니다.
+                <Button
+                    onClick={() => {}}>클릭 하면 답이 나올지어다</Button>
             </MainPageStyle>
         </PageLayout>
     );

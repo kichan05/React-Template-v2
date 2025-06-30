@@ -1,6 +1,11 @@
-import {GlobalStyle} from "./GlobalStyle";
-import styled, {ThemeProvider} from "styled-components";
-import {Theme} from "./theme";
+import styled from "styled-components";
+import {MainPage} from "./MainPage";
+
+export const PageLayout = styled.div`
+  padding: 12px;
+  margin: 0 auto;
+`
+
 
 const Box = styled.div`
   background-color: ${p => p.theme.color.Blue5};
@@ -14,9 +19,7 @@ const Title = styled.div`
 function App() {
     return (
         <>
-            <Box>
-                <Title>저는 박희찬입니다람쥐</Title>
-            </Box>
+            <MainPage/>
         </>
     )
 }

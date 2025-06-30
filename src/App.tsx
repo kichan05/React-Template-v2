@@ -6,13 +6,16 @@ const Box = styled.div`
   background-color: ${p => p.theme.color.Blue5};
 `
 
+const Title = styled.div`
+  font-size: 2em;
+  font-weight: 700;
+`
+
 function App() {
     return (
         <>
-            <h1>Hello World</h1>
             <Box>
-                <h2>Styled Components</h2>
-                <p>This is a simple example of styled-components with TypeScript.</p>
+                <Title>저는 박희찬입니다람쥐</Title>
             </Box>
         </>
     )

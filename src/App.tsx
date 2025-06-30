@@ -9,14 +9,11 @@ const Box = styled.div`
 function App() {
     return (
         <>
-            <ThemeProvider theme={Theme}>
-                <GlobalStyle/>
-                <h1>Hello World</h1>
-                <Box>
-                    <h2>Styled Components</h2>
-                    <p>This is a simple example of styled-components with TypeScript.</p>
-                </Box>
-            </ThemeProvider>
+            <h1>Hello World</h1>
+            <Box>
+                <h2>Styled Components</h2>
+                <p>This is a simple example of styled-components with TypeScript.</p>
+            </Box>
         </>
     )
 }

@@ -1,6 +1,6 @@
 import {FC} from "react";
 import styled from "styled-components";
-import {PageLayout} from "./App";
+import {PageLayout} from "./PageLayout";
 
 export type MainPageProps = {
 

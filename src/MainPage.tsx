@@ -1,7 +1,8 @@
-import {FC} from "react";
+import {ChangeEvent, FC, useState} from "react";
 import styled from "styled-components";
 import {PageLayout} from "./PageLayout";
 import {Button} from "./Button";
+import {Input} from "./Input";
 
 export type MainPageProps = {}
 
@@ -9,6 +10,7 @@ const MainPageStyle = styled.div`
 `
 
 export const MainPage: FC<MainPageProps> = () => {
+    const [name, setName] = useState("")
     return (
         <PageLayout>
             <MainPageStyle>
@@ -17,6 +19,11 @@ export const MainPage: FC<MainPageProps> = () => {
                     isDisabled
                     onClick={() => alert("Hello")}
                 >클릭 하면 답이 나올지어다</Button>
+                <Input
+                    value={name}
+                    onChange={setName}
+                />
+                {name}
             </MainPageStyle>
         </PageLayout>
     );

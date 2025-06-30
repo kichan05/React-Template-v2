@@ -1,4 +1,4 @@
-import {FC, ReactNode} from "react";
+import {ComponentPropsWithRef, FC, ReactNode} from "react";
 import styled, {css} from "styled-components";
 import {darken, lighten} from 'polished';
 
@@ -8,7 +8,7 @@ export type ButtonProps = {
     color?: string;
     background?: string;
     isDisabled?: boolean;
-}
+} & ComponentPropsWithRef<'button'>;
 
 const Color = css`
   ${p => {

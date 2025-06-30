@@ -7,7 +7,7 @@ export type InputProps = {
 } & ComponentPropsWithRef<'input'>
 
 const InputStyle = styled.input`
-  font-size: 16px;
+  font-size: 13px;
 
   box-shadow: 0 0 0 2px ${p => p.theme.color.Gray3};
   border: none;

@@ -1,8 +1,9 @@
-import {ChangeEvent, FC, useState} from "react";
+import {FC, useState} from "react";
 import styled from "styled-components";
 import {PageLayout} from "./PageLayout";
 import {Button} from "./Button";
 import {Input} from "./Input";
+import {LabelWrap} from "./LabelWrapProps";
 
 export type MainPageProps = {}
 
@@ -23,6 +24,12 @@ export const MainPage: FC<MainPageProps> = () => {
                     value={name}
                     onChange={setName}
                 />
+                <LabelWrap label={"이름"}>
+                    <Input
+                        value={name}
+                        onChange={setName}
+                    />
+                </LabelWrap>
                 {name}
             </MainPageStyle>
         </PageLayout>

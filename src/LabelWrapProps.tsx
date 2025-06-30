@@ -1,0 +1,32 @@
+import {FC, ReactNode} from "react";
+import styled from "styled-components";
+
+export type LabelWrapProps = {
+    label: string;
+    children: ReactNode;
+}
+const LabelWrapStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+const Label = styled.label`
+  font-size: 14px;
+  font-weight: bold;
+`
+const InputWrap = styled.div`
+  padding: 4px;
+  
+  & > * {
+    width : 100%;
+  }
+`
+export const LabelWrap: FC<LabelWrapProps> = ({label, children}) => {
+    return (
+        <LabelWrapStyle>
+            <Label>{label}</Label>
+            <InputWrap>
+                {children}
+            </InputWrap>
+        </LabelWrapStyle>
+    );
+};

@@ -4,9 +4,10 @@ import {darken, lighten} from 'polished';
 
 export type ButtonProps = {
     children: ReactNode;
+    onClick: () => void;
     color?: string;
     background?: string;
-    onClick: () => void;
+    isDisabled?: boolean;
 }
 
 const Color = css`
@@ -29,19 +30,29 @@ const Color = css`
       color: ${color};
       background-color: ${background};
 
-      &:hover {
-        background-color: ${darken(0.02, background)};
-      }
+      ${p => p.isDisabled && css`
+        &:hover {
+          background-color: ${darken(0.02, background)};
+        }
 
-      &:active {
-        background-color: ${lighten(0.02, background)};
-      }
+        &:active {
+          background-color: ${lighten(0.02, background)};
+        }
+      `}
     `
   }}
 `
 
 const ButtonStyle = styled.button<ButtonProps>`
   ${Color};
+
+  user-select: none;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -50,10 +61,12 @@ const ButtonStyle = styled.button<ButtonProps>`
 `
 
 export const Button: FC<ButtonProps>
-    = ({children, onClick, ...rest}) => {
+    = ({children, onClick, isDisabled, ...rest}) => {
 
     return (
-        <ButtonStyle onClick={() => onClick()} {...rest}>
+        <ButtonStyle
+            disabled={isDisabled}
+            onClick={() => onClick()} {...rest}>
             {children}
         </ButtonStyle>
     );

@@ -1,6 +1,6 @@
-import {MainPage} from "./page/MainPage";
-import {Header} from "./component/organisms/Header";
-import {Footer} from "./component/organisms/Footer";
+import {MainPage} from "./common/page/MainPage";
+import {Header} from "./common/component/organisms/Header";
+import {Footer} from "./common/component/organisms/Footer";
 import {Route, Routes} from "react-router-dom";
 import {RoutePath} from "./RoutePath";
 

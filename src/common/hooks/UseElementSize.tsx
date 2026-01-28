@@ -1,7 +1,8 @@
 import {useEffect, useRef, useState} from "react";
 
-export const useElementHeight = () => {
+export const useElementSize = () => {
     const ref = useRef<HTMLDivElement | null>(null);
+    const [width, setWidth] = useState(0)
     const [height, setHeight] = useState(0)
 
     useEffect(() => {
@@ -9,6 +10,7 @@ export const useElementHeight = () => {
 
         const observer = new ResizeObserver(entries => {
             for (let entry of entries) {
+                setWidth(entry.contentRect.width)
                 setHeight(entry.contentRect.height)
             }
         })
@@ -17,5 +19,5 @@ export const useElementHeight = () => {
         return () => observer.disconnect()
     }, [])
 
-    return [ref, height] as const
+    return [ref, width, height]
 }

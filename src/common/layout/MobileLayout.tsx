@@ -1,6 +1,6 @@
 import {FC, ReactNode} from "react";
 import styled from "styled-components";
-import {useElementHeight} from "../hooks/UseElementHeight";
+import {useElementSize} from "../hooks/UseElementSize";
 
 export type MobileLayoutProps = {
     top: ReactNode;
@@ -52,8 +52,8 @@ const BottomContent = styled.div<{ isBottomPadding?: boolean }>`
 `
 
 export const MobileLayout: FC<MobileLayoutProps> = ({top, bottom, children, isBottomPadding}) => {
-    const [topRef, topHeight] = useElementHeight()
-    const [bottomRef, bottomHeight] = useElementHeight()
+    const [topRef, , topHeight] = useElementSize()
+    const [bottomRef, , bottomHeight] = useElementSize()
 
     return (
         <MobileLayoutStyle>

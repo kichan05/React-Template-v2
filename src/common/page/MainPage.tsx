@@ -12,6 +12,7 @@ export const MainPage: FC<MainPageProps> = () => {
     return (
         <PageLayout>
             <MainPageStyle>
+                메인페이지
             </MainPageStyle>
         </PageLayout>
     );
